@@ -1,0 +1,21 @@
+{
+  "name": "proyecto-pec2",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html"
+  },
+  "keywords": [],
+  "author": "Jorge Monge Antolín",
+  "license": "ISC",
+  "description": "Pec 1 Jorge Monge ® - HTML+CSS",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "posthtml-include": "^2.0.1"
+  },
+  "dependencies": {
+    "lightbox2": "^2.11.5",
+    "proyecto-pec2": "file:"
+  }
+}

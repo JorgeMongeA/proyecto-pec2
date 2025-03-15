@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portada - Cocina del Mundo Jorge Monge Antolín</title>
+  <!-- Enlaza el archivo CSS que será procesado con PostCSS (y Autoprefixer añadirá los prefijos necesarios) -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <!-- Enlace "Saltar navegación" para accesibilidad -->
+  <a href="#main-content" class="skip-link">Saltar navegación</a>
+
+  <include src="src/includes/header.html"></include>
+
+  <!-- Contenido principal de la página -->
+  <main id="main-content">
+    <h2>Bienvenidos a Cocina del Mundo JJJ</h2>
+    <p>Explora las recetas más deliciosas de diferentes culturas.</p>
+    <!-- Botón que lleva a la página de categoría -->
+    <a href="categoria.html" class="btn">Ver recetas</a>
+  </main>
+  
+  <!-- Incluir el footer, de igual manera se procesa con PostHTML -->
+  <include src="src/includes/footer.html"></include>
+</body>
+</html>

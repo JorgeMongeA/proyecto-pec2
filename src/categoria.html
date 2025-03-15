@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categoría - Cocina del Mundo</title>
+  <!-- Enlaza el archivo CSS que será procesado con PostCSS (y Autoprefixer añadirá los prefijos necesarios) -->
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <!-- Enlace "Saltar navegación" para accesibilidad -->
+  <a href="#main-content" class="skip-link">Saltar navegación</a>
+
+  <!-- Incluir el header usando PostHTML. Durante el build, esta etiqueta 'include' se reemplazará por el contenido de src/includes/header.html -->
+  <include src="src/includes/header.html"></include>
+
+  <!-- Contenido principal de la página -->
+  <main id="main-content">
+    <h2>Recetas del Mundo</h2>
+    <div class="grid-container">
+      <!-- Tarjeta 1 -->
+      <div class="card">
+        <img src="./assets/img/receta1.jpg" alt="Receta 1: Paella Valenciana">
+        <h3>Paella Valenciana</h3>
+        <p>La paella valenciana es un plato tradicional de la cocina española, originario de Valencia.</p>
+        <a href="detalle.html" class="btn">Ver más</a>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="card">
+        <img src="./assets/img/receta2.jpg" alt="Receta 2: Sushi Japonés">
+        <h3>Sushi Japonés</h3>
+        <p>El sushi es un plato japonés que consiste en arroz aderezado con vinagre, acompañado de pescado crudo o mariscos.</p>
+        <a href="detalle.html" class="btn">Ver más</a>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="card">
+        <img src="./assets/img/receta3.jpg" alt="Receta 3: Tacos Mexicanos">
+        <h3>Tacos Mexicanos</h3>
+        <p>Los tacos son un plato tradicional mexicano que consiste en tortillas de maíz rellenas de carne, verduras y salsas.</p>
+        <a href="detalle.html" class="btn">Ver más</a>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Incluir el footer, de igual manera se procesa con PostHTML -->
+  <include src="src/includes/footer.html"></include>
+</body>
+</html>
