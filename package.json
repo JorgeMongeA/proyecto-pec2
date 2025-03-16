@@ -15,6 +15,7 @@
     "posthtml-include": "^2.0.1"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
     "lightbox2": "^2.11.5",
     "proyecto-pec2": "file:"
   }
