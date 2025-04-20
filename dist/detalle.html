@@ -13,6 +13,8 @@
 
   <!-- Incluir el header usando PostHTML. Durante el build, esta etiqueta 'include' se reemplazará por el contenido de src/includes/header.html -->
   <header>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <h1>Cocina del Mundo - Jorge Monge</h1>
   <nav aria-label="Navegación principal">
     <ul>
@@ -29,7 +31,7 @@
     <h2>Paella Valenciana</h2>
 
     <!-- Imagen destacada -->
-    <img src="/receta1.3ed6c33c.jpg" alt="Paella Valenciana" class="featured-image">
+    <img src="/assets/img/receta1.jpg" alt="Paella Valenciana" class="featured-image">
 
     <!-- Descripción de la receta -->
     <section>
@@ -44,15 +46,29 @@
     <section>
       <h3>Galería</h3>
       <div class="gallery">
-        <a href="/paella1.687ab79b.jpg" data-lightbox="recetas" data-title="Paella en preparación">
-          <img src="/paella1.687ab79b.jpg" alt="Paella en preparación">
+        <a href="/assets/img/paella1.jpg" data-lightbox="recetas" data-title="Paella en preparación">
+          <img src="/paella1-480.b2f2b8ed.jpg" srcset="/paella1-480.b2f2b8ed.jpg 480w, /paella1-768.deb18891.jpg 768w, /paella1-1200.2bf5e5bb.jpg 1200w" sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="Paella en preparación">
         </a>
-        <a href="/paella2.d2fabe79.jpg" data-lightbox="recetas" data-title="Paella servida">
-          <img src="/paella2.d2fabe79.jpg" alt="Paella servida">
+        <a href="/assets/img/paella2.jpg" data-lightbox="recetas" data-title="Paella servida">
+          <img src="/assets/img/paella2.jpg" alt="Paella servida">
         </a>
-        <a href="/paella3.cddb7e39.jpg" data-lightbox="recetas" data-title="Ingredientes de la paella">
-          <img src="/paella3.cddb7e39.jpg" alt="Ingredientes de la paella">
+        <a href="/assets/img/paella3.jpg" data-lightbox="recetas" data-title="Ingredientes de la paella">
+          <picture>
+            <!-- versión WEBP para pantallas grandes -->
+            <source srcset="/paella3-800.5c51af1e.webp" type="image/webp" media="(min-width: 768px)">
+            <!-- versión WEBP para pantallas pequeñas -->
+            <source srcset="/paella3-400.a91f95e3.webp" type="image/webp" media="(max-width: 767px)">
+            
+            <!-- versión JPG para pantallas grandes -->
+            <source srcset="/paella3-800.d1a48e9e.jpg" type="image/jpeg" media="(min-width: 768px)">
+            <!-- versión JPG para pantallas pequeñas -->
+            <source srcset="/paella3-400.d5886dda.jpg" type="image/jpeg" media="(max-width: 767px)">
+            
+            <!-- Fallback final: si el navegador no soporta <picture> o <source> -->
+            <img src="/assets/img/paella3.jpg" alt="Ingredientes de la paella" style="max-width: 100%; height: auto">
+          </picture>
         </a>
+        
       </div>
     </section>
     
@@ -68,6 +84,8 @@
   
   <!-- Incluir el footer, de igual manera se procesa con PostHTML -->
   <footer>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <p>2025 Cocina del Mundo. Todos los derechos reservados.</p>
   <p>UOC - HTML+CSS 1 - Jorge Monge Antolín</p>
   <nav aria-label="Enlaces útiles">

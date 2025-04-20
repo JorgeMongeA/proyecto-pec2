@@ -1,13 +1,30 @@
-.grid-container {
-  gap: 1rem;
-  display: grid;
-}
-
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid-container {
+  gap: 1rem;
+  display: grid;
+}
+
+.navbar ul {
+  gap: 1rem;
+  display: flex;
 }
 
 .skip-link {
@@ -189,5 +206,89 @@ main h3 {
   color: #333;
   margin-bottom: 15px;
   font-size: 1.5rem;
+}
+
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
+@media (width <= 576px) {
+  html {
+    font-size: 14px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: .5rem;
+  }
+
+  .grid-container, .cards, .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (width >= 577px) and (width <= 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .grid-container, .cards, .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar ul {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (width >= 769px) and (width <= 992px) {
+  html {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 700px;
+  }
+
+  .grid-container, .cards, .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width >= 993px) and (width <= 1200px) {
+  html {
+    font-size: 17px;
+  }
+
+  .container {
+    max-width: 960px;
+  }
+
+  .grid-container, .cards, .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (width >= 1201px) {
+  html {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .grid-container, .cards, .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (width <= 600px) {
+  .navbar ul {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.91688108.css.map */

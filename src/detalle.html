@@ -35,14 +35,57 @@
       <h3>Galería</h3>
       <div class="gallery">
         <a href="./assets/img/paella1.jpg" data-lightbox="recetas" data-title="Paella en preparación">
-          <img src="./assets/img/paella1.jpg" alt="Paella en preparación">
+          <img 
+              src="assets/img/paella1-480.jpg" 
+              srcset="
+                assets/img/paella1-480.jpg 480w,
+                assets/img/paella1-768.jpg 768w,
+                assets/img/paella1-1200.jpg 1200w
+              "
+              sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              alt="Paella en preparación"
+            />
         </a>
         <a href="./assets/img/paella2.jpg" data-lightbox="recetas" data-title="Paella servida">
           <img src="./assets/img/paella2.jpg" alt="Paella servida">
         </a>
         <a href="./assets/img/paella3.jpg" data-lightbox="recetas" data-title="Ingredientes de la paella">
-          <img src="./assets/img/paella3.jpg" alt="Ingredientes de la paella">
+          <picture>
+            <!-- versión WEBP para pantallas grandes -->
+            <source 
+              srcset="./assets/img/paella3-800.webp" 
+              type="image/webp" 
+              media="(min-width: 768px)"
+            >
+            <!-- versión WEBP para pantallas pequeñas -->
+            <source 
+              srcset="./assets/img/paella3-400.webp" 
+              type="image/webp" 
+              media="(max-width: 767px)"
+            >
+            
+            <!-- versión JPG para pantallas grandes -->
+            <source 
+              srcset="./assets/img/paella3-800.jpg" 
+              type="image/jpeg" 
+              media="(min-width: 768px)"
+            >
+            <!-- versión JPG para pantallas pequeñas -->
+            <source 
+              srcset="./assets/img/paella3-400.jpg" 
+              type="image/jpeg" 
+              media="(max-width: 767px)"
+            >
+            
+            <!-- Fallback final: si el navegador no soporta <picture> o <source> -->
+            <img 
+              src="./assets/img/paella3.jpg" 
+              alt="Ingredientes de la paella"
+              style="max-width: 100%; height: auto;"
+            >
+          </picture>
         </a>
+        
       </div>
     </section>
     

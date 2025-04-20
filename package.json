@@ -4,7 +4,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel src/index.html --open",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "optimize-images": "node optimize-images.js"
   },
   "keywords": [],
   "author": "Jorge Monge Antolín",
@@ -12,7 +13,8 @@
   "description": "Pec 1 Jorge Monge ® - HTML+CSS",
   "devDependencies": {
     "parcel": "^2.13.3",
-    "posthtml-include": "^2.0.1"
+    "posthtml-include": "^2.0.1",
+    "sharp": "^0.34.0"
   },
   "dependencies": {
     "jquery": "^3.7.1",
