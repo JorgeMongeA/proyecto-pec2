@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, :before, :after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-img {
+img, video, iframe {
   max-width: 100%;
   height: auto;
   display: block;
@@ -15,16 +23,6 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-}
-
-.grid-container {
-  gap: 1rem;
-  display: grid;
-}
-
-.navbar ul {
-  gap: 1rem;
-  display: flex;
 }
 
 .skip-link {
@@ -65,10 +63,9 @@ nav ul li a {
   text-decoration: none;
 }
 
-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+.navbar ul {
+  gap: 1rem;
+  display: flex;
 }
 
 footer {
@@ -87,6 +84,12 @@ footer nav ul {
 footer nav ul li a {
   color: #fff;
   text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .grid-container {
@@ -142,6 +145,12 @@ footer nav ul li a {
   background: #0056b3;
 }
 
+.cards {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  display: grid;
+}
+
 .featured-image {
   border-radius: 8px;
   width: 100%;
@@ -179,6 +188,108 @@ footer nav ul li a {
   left: 0;
 }
 
+header {
+  animation: 1s ease-out headerFadeIn;
+}
+
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+nav ul li a {
+  border-bottom: 2px solid #0000;
+  transition: color .3s, border-bottom .3s;
+}
+
+nav ul li a:hover {
+  color: gold;
+  border-bottom: 2px solid gold;
+}
+
+.card img {
+  transition: transform .4s;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+.btn {
+  transition: background-color .4s, transform .2s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+main {
+  animation: 1.2s ease-in fadeInContent;
+}
+
+@keyframes fadeInContent {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.featured-image {
+  animation: 1s ease-out featuredBounce;
+}
+
+@keyframes featuredBounce {
+  0% {
+    opacity: 0;
+    transform: scale(.9);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card {
+  opacity: 0;
+  animation: .8s ease-out forwards cardEntrance;
+  transform: translateY(20px);
+}
+
+.card:first-child {
+  animation-delay: .2s;
+}
+
+.card:nth-child(2) {
+  animation-delay: .4s;
+}
+
+.card:nth-child(3) {
+  animation-delay: .6s;
+}
+
+@keyframes cardEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 main ul {
   padding: 0;
   list-style-type: none;
@@ -206,12 +317,6 @@ main h3 {
   color: #333;
   margin-bottom: 15px;
   font-size: 1.5rem;
-}
-
-.cards {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-  display: grid;
 }
 
 @media (width <= 576px) {
@@ -289,6 +394,42 @@ main h3 {
 @media (width <= 600px) {
   .navbar ul {
     display: none;
+  }
+}
+
+.portada-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.imagen-portada {
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 80% 90%, 50% 100%, 20% 90%, 0% 60%, 10% 20%);
+  transition: transform .5s;
+}
+
+.imagen-portada:hover {
+  transform: scale(1.05);
+}
+
+.svg-container {
+  justify-content: center;
+  margin: 3rem 0;
+  display: flex;
+}
+
+.svg-container svg {
+  animation: 4s linear infinite svgRotate;
+}
+
+@keyframes svgRotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=index.91688108.css.map */

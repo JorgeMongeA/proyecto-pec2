@@ -433,3 +433,44 @@ main h3 {
     display: none;
   }
 }
+
+/*==========================================
+  Imagen portada recortada con clip-path
+===========================================*/
+.portada-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.imagen-portada {
+  clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 80% 90%, 50% 100%, 20% 90%, 0% 60%, 10% 20%);
+  transition: transform 0.5s ease;
+}
+
+.imagen-portada:hover {
+  transform: scale(1.05);
+}
+
+/*==========================================
+  SVG con animación CSS sencilla
+===========================================*/
+.svg-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+
+.svg-container svg {
+  animation: svgRotate 4s linear infinite;
+}
+
+@keyframes svgRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
