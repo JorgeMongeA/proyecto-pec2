@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/favicon.c48429f6.png">
+
   <title>Detalle - Paella Valenciana</title>
   <!-- Enlaza el archivo CSS que será procesado con PostCSS (y Autoprefixer añadirá los prefijos necesarios) -->
   <link rel="stylesheet" href="/index.91688108.css">
@@ -30,8 +32,24 @@
   <main id="main-content">
     <h2>Paella Valenciana</h2>
 
-    <!-- Imagen destacada -->
-    <img src="/receta1.3ed6c33c.jpg" alt="Paella Valenciana" class="featured-image">
+    <!-- Imagen destacada con dirección de arte -->
+      <picture class="featured-image">
+        <!-- versión escritorio amplia (mayor a 768px) en formato webp -->
+        <source srcset="/receta1-large.01202b27.webp" type="image/webp" media="(min-width: 768px)">
+        
+        <!-- versión móvil cercana (menor a 767px) en formato webp -->
+        <source srcset="/receta1-small.6520e6fc.webp" type="image/webp" media="(max-width: 767px)">
+        
+        <!-- versión escritorio JPG -->
+        <source srcset="/receta1-large.a4a5b3fb.jpg" type="image/jpeg" media="(min-width: 768px)">
+        
+        <!-- versión móvil JPG -->
+        <source srcset="/receta1-small.824a6d5e.jpg" type="image/jpeg" media="(max-width: 767px)">
+        
+        <!-- fallback final -->
+        <img src="/receta1-large.a4a5b3fb.jpg" alt="Paella Valenciana">
+      </picture>
+
 
     <!-- Descripción de la receta -->
     <section>

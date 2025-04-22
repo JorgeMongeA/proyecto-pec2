@@ -38,3 +38,10 @@ fs.readdirSync(inputDir).forEach(file => {
     console.log(`Omitido (no es imagen): ${file}`);
   }
 });
+
+sharp(path.join(inputDir, 'favicon.jpg'))
+  .resize(32, 32) // tamaño estándar favicon
+  .png()
+  .toFile(path.join(outputDir, 'favicon.png'))
+  .then(() => console.log('✅ Favicon optimizado: favicon.png'))
+  .catch(err => console.error('❌ Error generando favicon', err));
