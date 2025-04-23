@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
+
 // Directorio de entrada (imágenes originales)
 const inputDir = path.join(__dirname, 'src', 'images_original');
 // Directorio de salida (imágenes optimizadas)
