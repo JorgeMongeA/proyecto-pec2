@@ -17,6 +17,7 @@ if (!fs.existsSync(outputDir)) {
 fs.readdirSync(inputDir).forEach(file => {
   const inputFile = path.join(inputDir, file);
   const outputFile = path.join(outputDir, file);
+  
 
   // Comprobamos la extensión para procesar solo imágenes
   if (/\.(jpe?g|png|gif)$/i.test(file)) {
