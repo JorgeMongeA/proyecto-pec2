@@ -48,6 +48,6 @@ sharp(path.join(inputDir, 'favicon.jpg'))
   .toFile(path.join(outputDir, 'favicon.png'))
   .then(() => console.log('✅ Favicon optimizado: favicon.png'))
   .catch(err => console.error('❌ Error generando favicon', err));
-  // Tu código JavaScript aquí
+  
 });
   
