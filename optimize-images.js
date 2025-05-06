@@ -2,6 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
+
 document.addEventListener('DOMContentLoaded', function () {
 
 // Directorio de entrada (imágenes originales)
