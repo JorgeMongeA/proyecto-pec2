@@ -25,7 +25,7 @@ fs.readdirSync(inputDir).forEach(file => {
   if (/\.(jpe?g|png|gif)$/i.test(file)) {
     // sharp puede leer la imagen de inputFile y luego "pipeline" de transformaciones
     sharp(inputFile)
-      // redimensionar si queremos un máximo de 1200 px de ancho
+      // redimensionar un máximo de 1200 px de ancho
       .resize({ width: 1200, withoutEnlargement: true })
       // convertir a JPEG con calidad 80 (reduce peso)
       .jpeg({ quality: 80 })
