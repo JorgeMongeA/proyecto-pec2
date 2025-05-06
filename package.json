@@ -14,12 +14,14 @@
   "devDependencies": {
     "parcel": "^2.13.3",
     "posthtml-include": "^2.0.1",
-    "sharp": "^0.34.0",
+    "sharp": "^0.34.1",
     "svgo": "^3.3.2"
   },
   "dependencies": {
+    "glob": "^11.0.2",
     "jquery": "^3.7.1",
     "lightbox2": "^2.11.5",
     "proyecto-pec2": "file:"
-  }
+  },
+  "main": "optimize-images.js"
 }
